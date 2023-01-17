@@ -14,7 +14,7 @@ run: ## Make run
 	@./awesome-api >./awesome.log 2>&1 &
 
 stop: ## Make stop
-	@kill "$(shell pgrep awesome-api)" >/dev/null 2>&1 &
+	@kill "$(shell pgrep awesome-api)" >/dev/null &
 
 clean:  ## Make clean
 	@make stop
