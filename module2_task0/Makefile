@@ -12,6 +12,7 @@ stop: ## Make stop
 	@kill "$(shell pgrep awesome-api)"
 
 clean:  ## Make clean
+	@make stop
 	@rm -rf awesome-api
 	@rm -rf awesome.log
 
