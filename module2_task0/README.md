@@ -13,5 +13,7 @@ toto
 ## Command
 help:  Make help
 build:  Make build
+run: Make run
+stop: Make stop
 clean:  Make clean
-post:  Make post
+test:  Make test
