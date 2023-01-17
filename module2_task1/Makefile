@@ -5,10 +5,7 @@ lint:  ## Make lint
 	@golangci-lint run
 
 build:  ## Make build
-	@make lint &
-	@go mod init github.com/AdelOtmani/awesome-api
-	@go get github.com/gorilla/mux
-	@go build
+	@make lint >/dev/null 2>&1 go build || exit -1
 
 run: ## Make run
 	@./awesome-api >./awesome.log 2>&1 &
