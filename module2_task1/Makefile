@@ -5,13 +5,13 @@ lint:  ## Make lint
 	@golangci-lint run
 
 build:  ## Make build
-	@make lint >/dev/null 2>&1 go build || exit -1
+	@make lint >/dev/null 2>&1 && go build || exit -1
 
 run: ## Make run
 	@./awesome-api >./awesome.log 2>&1 &
 
 stop: ## Make stop
-	@kill "$(shell pgrep awesome-api)" >/dev/null &
+	@kill "$(shell pgrep awesome-api)" 2>/dev/null &
 
 clean:  ## Make clean
 	@make stop
